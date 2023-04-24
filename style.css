@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 300px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    animation: move 3s linear infinite, color 5s linear infinite;
+}
+
+@keyframes color {
+    0% {
+        background-color: chartreuse;
+    }
+    17% {
+        background-color: #00ffbb;
+    }
+    34% {
+        background-color: #002aff;
+    }
+    51% {
+        background-color: #7300ff;
+    }
+    68% {
+        background-color: #ff006a;
+    }
+    85% {
+        background-color: #ffb700;
+    }
+    100% {
+        background-color: chartreuse;
+    }
+}
+
+@keyframes move {
+    from {
+        transform: rotate(0);
+        transform-origin: 100px 250px;
+    }
+    to {
+        transform: rotate(360deg);
+        transform-origin: 100px 250px;
+    }
+}
